@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* 
+from employee</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_db
+Query=select employee.* 
+from emp...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="EmployeeId" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="Int32" />
+            <Field name="LastName" size="20" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="FirstName" size="20" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="Title" size="30" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="ReportsTo" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="Int32" />
+            <Field name="BirthDate" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="DateTime" />
+            <Field name="HireDate" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="DateTime" />
+            <Field name="Address" size="70" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="City" size="40" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="State" size="40" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="Country" size="40" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="PostalCode" size="10" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="Phone" size="24" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="Fax" size="24" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+            <Field name="Email" size="60" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select employee.* &#xA;from employee" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_date.DateSK,
+	dim_date.FullDateAK 
+from dim_date</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_dw
+Query=select dim_date.DateSK,
+	di...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="DateSK" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_date.DateSK,&#xA;	dim_date.FullDateAK &#xA;from dim_date" type="Int32" />
+            <Field name="FullDateAK" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_date.DateSK,&#xA;	dim_date.FullDateAK &#xA;from dim_date" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="78" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,
+	dim_geography.Country,
+	dim_geography.GeoSK,
+	dim_geography.State 
+from dim_geography</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_dw
+Query=select dim_geography.City,...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="City" size="40" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK,&#xA;	dim_geography.State &#xA;from dim_geography" type="V_String" />
+            <Field name="Country" size="40" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK,&#xA;	dim_geography.State &#xA;from dim_geography" type="V_String" />
+            <Field name="GeoSK" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK,&#xA;	dim_geography.State &#xA;from dim_geography" type="Int32" />
+            <Field name="State" size="40" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK,&#xA;	dim_geography.State &#xA;from dim_geography" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="DateSK" selected="True" />
+            <SelectField field="FullDateAK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="30" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="GeoSK" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="186" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EmployeeId" selected="True" />
+            <SelectField field="LastName" selected="True" />
+            <SelectField field="FirstName" selected="True" />
+            <SelectField field="Title" selected="True" />
+            <SelectField field="ReportsTo" selected="True" />
+            <SelectField field="BirthDate" selected="True" />
+            <SelectField field="HireDate" selected="True" />
+            <SelectField field="Address" selected="True" />
+            <SelectField field="PostalCode" selected="True" />
+            <SelectField field="Phone" selected="True" />
+            <SelectField field="Fax" selected="True" />
+            <SelectField field="Email" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="318" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="City" />
+            <Field field="State" />
+            <Field field="Country" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="City" />
+            <Field field="State" />
+            <Field field="Country" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_City" selected="True" rename="Right_City" input="Right_" />
+                <SelectField field="Right_State" selected="True" rename="Right_State" input="Right_" />
+                <SelectField field="Right_Country" selected="True" rename="Right_Country" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="414" y="90" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EmployeeId" selected="True" />
+            <SelectField field="LastName" selected="True" />
+            <SelectField field="FirstName" selected="True" />
+            <SelectField field="Title" selected="True" />
+            <SelectField field="ReportsTo" selected="True" />
+            <SelectField field="BirthDate" selected="True" />
+            <SelectField field="HireDate" selected="True" />
+            <SelectField field="Address" selected="True" />
+            <SelectField field="PostalCode" selected="True" />
+            <SelectField field="GeoSK" selected="True" rename="EmployeeGeoSK" />
+            <SelectField field="Phone" selected="True" />
+            <SelectField field="Fax" selected="True" />
+            <SelectField field="Email" selected="True" />
+            <SelectField field="City" selected="False" />
+            <SelectField field="State" selected="False" />
+            <SelectField field="Country" selected="False" />
+            <SelectField field="Right_City" selected="False" />
+            <SelectField field="Right_State" selected="False" />
+            <SelectField field="Right_Country" selected="False" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="510" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="BirthDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="FullDateAK" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_EmployeeId" selected="True" input="Left_" />
+                <SelectField field="Left_LastName" selected="True" input="Left_" />
+                <SelectField field="Left_FirstName" selected="True" input="Left_" />
+                <SelectField field="Left_Title" selected="True" input="Left_" />
+                <SelectField field="Left_ReportsTo" selected="True" input="Left_" />
+                <SelectField field="Left_BirthDate" selected="True" input="Left_" />
+                <SelectField field="Left_HireDate" selected="True" input="Left_" />
+                <SelectField field="Left_Address" selected="True" input="Left_" />
+                <SelectField field="Left_PostalCode" selected="True" input="Left_" />
+                <SelectField field="Left_EmployeeGeoSK" selected="True" input="Left_" />
+                <SelectField field="Left_Phone" selected="True" input="Left_" />
+                <SelectField field="Left_Fax" selected="True" input="Left_" />
+                <SelectField field="Left_Email" selected="True" input="Left_" />
+                <SelectField field="Right_DateSK" selected="True" input="Right_" />
+                <SelectField field="Right_FullDateAK" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="618" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EmployeeId" selected="True" />
+            <SelectField field="LastName" selected="True" />
+            <SelectField field="FirstName" selected="True" />
+            <SelectField field="Title" selected="True" />
+            <SelectField field="ReportsTo" selected="True" />
+            <SelectField field="DateSK" selected="True" rename="BirthDateSK" />
+            <SelectField field="BirthDate" selected="True" />
+            <SelectField field="HireDate" selected="True" />
+            <SelectField field="Address" selected="True" />
+            <SelectField field="PostalCode" selected="True" />
+            <SelectField field="EmployeeGeoSK" selected="True" />
+            <SelectField field="Phone" selected="True" />
+            <SelectField field="Fax" selected="True" />
+            <SelectField field="Email" selected="True" />
+            <SelectField field="FullDateAK" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="726" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="HireDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="FullDateAK" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="810" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EmployeeId" selected="True" />
+            <SelectField field="LastName" selected="True" />
+            <SelectField field="FirstName" selected="True" />
+            <SelectField field="Title" selected="True" />
+            <SelectField field="ReportsTo" selected="True" rename="ReportsToSK" />
+            <SelectField field="BirthDateSK" selected="True" />
+            <SelectField field="BirthDate" selected="True" />
+            <SelectField field="DateSK" selected="True" rename="HireDateSK" />
+            <SelectField field="HireDate" selected="True" />
+            <SelectField field="Address" selected="True" />
+            <SelectField field="PostalCode" selected="True" />
+            <SelectField field="EmployeeGeoSK" selected="True" />
+            <SelectField field="Phone" selected="True" />
+            <SelectField field="Fax" selected="True" />
+            <SelectField field="Email" selected="True" />
+            <SelectField field="FullDateAK" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="882" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[EmployeeId]" field="EmployeeSK" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[EmployeeSK = [EmployeeId]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="918" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="EmployeeSK" selected="True" />
+            <SelectField field="EmployeeId" selected="True" />
+            <SelectField field="LastName" selected="True" />
+            <SelectField field="FirstName" selected="True" />
+            <SelectField field="Title" selected="True" />
+            <SelectField field="ReportsToSK" selected="True" />
+            <SelectField field="BirthDateSK" selected="True" />
+            <SelectField field="BirthDate" selected="True" />
+            <SelectField field="HireDateSK" selected="True" />
+            <SelectField field="HireDate" selected="True" />
+            <SelectField field="Address" selected="True" />
+            <SelectField field="PostalCode" selected="True" />
+            <SelectField field="EmployeeGeoSK" selected="True" />
+            <SelectField field="Phone" selected="True" />
+            <SelectField field="Fax" selected="True" />
+            <SelectField field="Email" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1002" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||dim_employee</File>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_dw
+Query=dim_employee</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="9" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="11" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="7" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Join" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Join" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Join" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Output" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>dim_employee_sor</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

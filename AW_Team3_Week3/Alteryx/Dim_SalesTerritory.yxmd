@@ -1,0 +1,418 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=Select Sales.SalesTerritory....</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="TerritoryID" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="Int32" />
+            <Field name="Name" size="50" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="V_WString" />
+            <Field name="CountryRegionCode" size="3" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="V_WString" />
+            <Field name="Group" size="50" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="V_WString" />
+            <Field name="SalesYTD" scale="4" size="21" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="FixedDecimal" />
+            <Field name="SalesLastYear" scale="4" size="21" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="FixedDecimal" />
+            <Field name="CostYTD" scale="4" size="21" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="FixedDecimal" />
+            <Field name="CostLastYear" scale="4" size="21" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="FixedDecimal" />
+            <Field name="rowguid" size="36" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="V_String" />
+            <Field name="ModifiedDate" source="File: aka:AdventureWorks2017|||Select Sales.SalesTerritory.* From Sales.SalesTerritory" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4AFE7C619E339CB0F8AAFE90371BE7BE6E142</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* 
+from dim_geography</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AW_Purchasing
+Query=select dim_geography.* 
+fro...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SK_GeographyID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="Int32" />
+            <Field name="City" size="30" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+            <Field name="PostalCode" size="15" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+            <Field name="StateProvinceCode" size="3" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="String" />
+            <Field name="CountryRegionCode" size="3" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+            <Field name="StateName" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+            <Field name="CountryName" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+            <Field name="CreatedDate" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="DateTime" />
+            <Field name="DI_JobID" size="16777216" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+            <Field name="ModifiedDate" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="DateTime" />
+            <Field name="SOR_SK" size="16777216" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_geography.* &#xA;from dim_geography" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="TerritoryID" selected="True" />
+            <SelectField field="Name" selected="True" rename="SalesTerritoryName" />
+            <SelectField field="CountryRegionCode" selected="True" />
+            <SelectField field="Group" selected="True" />
+            <SelectField field="rowguid" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="234" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SK_GeographyID" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="CountryRegionCode" selected="True" />
+            <SelectField field="DI_JobID" selected="True" />
+            <SelectField field="SOR_SK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Filter.Filter">
+        <Position x="246" y="126" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Expression>[CountryRegionCode] = "US"</Expression>
+          <Mode>Simple</Mode>
+          <Simple>
+            <Operator>=</Operator>
+            <Field>CountryRegionCode</Field>
+            <Operands>
+              <IgnoreTimeInDateTime>True</IgnoreTimeInDateTime>
+              <DateType>fixed</DateType>
+              <PeriodDate>2020-10-13 13:55:52</PeriodDate>
+              <PeriodType>
+              </PeriodType>
+              <PeriodCount>0</PeriodCount>
+              <Operand>US</Operand>
+              <StartDate>2020-10-13 13:55:52</StartDate>
+              <EndDate>2020-10-13 13:55:52</EndDate>
+            </Operands>
+          </Simple>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>[CountryRegionCode] = "US"</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFilter" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="378" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="CountryRegionCode" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="CountryRegionCode" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_TerritoryID" selected="True" input="Left_" />
+                <SelectField field="Left_SalesTerritoryName" selected="True" input="Left_" />
+                <SelectField field="Left_Group" selected="True" input="Left_" />
+                <SelectField field="Left_rowguid" selected="True" input="Left_" />
+                <SelectField field="Right_SK_GeographyID" selected="True" input="Right_" />
+                <SelectField field="Right_City" selected="True" input="Right_" />
+                <SelectField field="Right_CountryRegionCode" selected="False" rename="Right_CountryRegionCode" input="Right_" />
+                <SelectField field="Right_DI_JobID" selected="True" input="Right_" />
+                <SelectField field="Right_SOR_SK" selected="True" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Unique.Unique">
+        <Position x="498" y="198" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <UniqueFields>
+            <Field field="TerritoryID" />
+            <Field field="SK_GeographyID" />
+          </UniqueFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxUnique" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="618" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="CreatedDate" size="19" type="DateTime" />
+            <FormulaField expression="DateTimeNow()" field="ModifiedDate" size="19" type="DateTime" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_JobID" size="16777216" type="V_String" />
+            <FormulaField expression="&quot;1&quot;" field="SOR_SK" size="16777216" type="V_String" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CreatedDate = DateTimeNow()
+ModifiedDate = DateTimeNow()
+DI_JobID = [Engine.Work...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="726" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>SK_SalesTerritoryID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="822" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SK_SalesTerritoryID" selected="True" />
+            <SelectField field="TerritoryID" selected="True" />
+            <SelectField field="SalesTerritoryName" selected="True" />
+            <SelectField field="Group" selected="True" />
+            <SelectField field="rowguid" selected="True" />
+            <SelectField field="SK_GeographyID" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="DI_JobID" selected="True" />
+            <SelectField field="SOR_SK" selected="True" />
+            <SelectField field="CreatedDate" selected="True" />
+            <SelectField field="ModifiedDate" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="918" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||Dim_SalesTerritory</File>
+          <Passwords>4AFE7C619E339CB0F8AAFE90371BE7BE6E142</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AW_Purchasing
+Query=Dim_SalesTerritory</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="6" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="True" />
+      <Destination ToolID="6" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Join" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Unique" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dim_SalesTerritory</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

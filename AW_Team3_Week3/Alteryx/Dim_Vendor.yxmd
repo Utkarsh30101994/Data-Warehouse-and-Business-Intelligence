@@ -1,0 +1,212 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,
+	Purchasing.Vendor.AccountNumber,
+	Purchasing.Vendor.Name,
+	Purchasing.Vendor.CreditRating,
+	Purchasing.Vendor.PreferredVendorStatus,
+	Purchasing.Vendor.ActiveFlag,
+	Purchasing.Vendor.PurchasingWebServiceURL 
+from Purchasing.Vendor</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=select Purchasing.Vendor.Bus...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BusinessEntityID" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="Int32" />
+            <Field name="AccountNumber" size="15" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="V_WString" />
+            <Field name="Name" size="50" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="V_WString" />
+            <Field name="CreditRating" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="Int16" />
+            <Field name="PreferredVendorStatus" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="Bool" />
+            <Field name="ActiveFlag" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="Bool" />
+            <Field name="PurchasingWebServiceURL" size="1024" source="File: aka:AdventureWorks2017|||select Purchasing.Vendor.BusinessEntityID,&#xA;	Purchasing.Vendor.AccountNumber,&#xA;	Purchasing.Vendor.Name,&#xA;	Purchasing.Vendor.CreditRating,&#xA;	Purchasing.Vendor.PreferredVendorStatus,&#xA;	Purchasing.Vendor.ActiveFlag,&#xA;	Purchasing.Vendor.PurchasingWebServiceURL &#xA;from Purchasing.Vendor" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="CreatedDate" size="19" type="DateTime" />
+            <FormulaField expression="DateTimeNow()" field="ModifiedDate" size="19" type="DateTime" />
+            <FormulaField expression="&quot;1&quot;" field="SOR_SK" size="1073741823" type="V_WString" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_JobID" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CreatedDate = DateTimeNow()
+ModifiedDate = DateTimeNow()
+SOR_SK = "1"
+DI_JobID =...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="306" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>SK_VendorID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="402" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SK_VendorID" selected="True" />
+            <SelectField field="BusinessEntityID" selected="True" rename="NK_VendorID" />
+            <SelectField field="AccountNumber" selected="True" />
+            <SelectField field="Name" selected="True" />
+            <SelectField field="CreditRating" selected="True" />
+            <SelectField field="PreferredVendorStatus" selected="True" />
+            <SelectField field="ActiveFlag" selected="True" />
+            <SelectField field="PurchasingWebServiceURL" selected="True" />
+            <SelectField field="CreatedDate" selected="True" />
+            <SelectField field="ModifiedDate" selected="True" />
+            <SelectField field="SOR_SK" selected="True" />
+            <SelectField field="DI_JobID" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="498" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||Dim_Vendor</File>
+          <Passwords>4AFE7C619E339CB0F8AAFE90371BE7BE6E142</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AW_Purchasing
+Query=Dim_Vendor</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dim_Vendor</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

@@ -1,0 +1,404 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2019.4">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||select HumanResources.EmployeePayHistory.* 
+from HumanResources.EmployeePayHistory</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=select HumanResources.Employ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BusinessEntityID" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeePayHistory.* &#xA;from HumanResources.EmployeePayHistory" type="Int32" />
+            <Field name="RateChangeDate" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeePayHistory.* &#xA;from HumanResources.EmployeePayHistory" type="DateTime" />
+            <Field name="Rate" scale="4" size="21" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeePayHistory.* &#xA;from HumanResources.EmployeePayHistory" type="FixedDecimal" />
+            <Field name="PayFrequency" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeePayHistory.* &#xA;from HumanResources.EmployeePayHistory" type="Int16" />
+            <Field name="ModifiedDate" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeePayHistory.* &#xA;from HumanResources.EmployeePayHistory" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords />
+          <CachedCosmeticName />
+          <File RecordLimit="" FileFormat="23">aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* 
+from HumanResources.EmployeeDepartmentHistory</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>aka:AdventureWorks2017
+Query=select HumanResources.Employ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="BusinessEntityID" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* &#xA;from HumanResources.EmployeeDepartmentHistory" type="Int32" />
+            <Field name="DepartmentID" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* &#xA;from HumanResources.EmployeeDepartmentHistory" type="Int16" />
+            <Field name="ShiftID" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* &#xA;from HumanResources.EmployeeDepartmentHistory" type="Int16" />
+            <Field name="StartDate" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* &#xA;from HumanResources.EmployeeDepartmentHistory" type="Date" />
+            <Field name="EndDate" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* &#xA;from HumanResources.EmployeeDepartmentHistory" type="Date" />
+            <Field name="ModifiedDate" source="File: aka:AdventureWorks2017|||select HumanResources.EmployeeDepartmentHistory.* &#xA;from HumanResources.EmployeeDepartmentHistory" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="174" y="54" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="BusinessEntityID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="BusinessEntityID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_BusinessEntityID" selected="True" input="Left_" />
+                <SelectField field="Left_RateChangeDate" selected="True" input="Left_" />
+                <SelectField field="Left_Rate" selected="True" input="Left_" />
+                <SelectField field="Left_PayFrequency" selected="True" input="Left_" />
+                <SelectField field="Right_BusinessEntityID" selected="False" rename="Right_BusinessEntityID" input="Right_" />
+                <SelectField field="Right_DepartmentID" selected="True" input="Right_" />
+                <SelectField field="Right_StartDate" selected="True" input="Right_" />
+                <SelectField field="Right_EndDate" selected="True" input="Right_" />
+                <SelectField field="Right_ModifiedDate" selected="False" rename="Right_ModifiedDate" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="318" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="DepartmentID" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="DepartmentID" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Left_BusinessEntityID" selected="True" input="Left_" />
+                <SelectField field="Left_RateChangeDate" selected="True" input="Left_" />
+                <SelectField field="Left_Rate" selected="True" input="Left_" />
+                <SelectField field="Left_PayFrequency" selected="True" input="Left_" />
+                <SelectField field="Left_DepartmentID" selected="True" input="Left_" />
+                <SelectField field="Left_StartDate" selected="True" input="Left_" />
+                <SelectField field="Left_EndDate" selected="True" input="Left_" />
+                <SelectField field="Right_SK_EmployeeID" selected="True" input="Right_" />
+                <SelectField field="Right_DepartmentID" selected="False" rename="Right_DepartmentID" input="Right_" />
+                <SelectField field="Right_BusinessEntityID" selected="False" rename="Right_BusinessEntityID" input="Right_" />
+                <SelectField field="*Unknown" selected="False" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="186" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>4AFE7C619E339CB0F8AAFE90371BE7BE6E142</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* 
+from dim_employee</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AW_Purchasing
+Query=select dim_employee.* 
+from...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="SK_EmployeeID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int32" />
+            <Field name="AddressLine1" size="60" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="BirthDate" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="DateTime" />
+            <Field name="City" size="30" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="DepartmentID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int16" />
+            <Field name="DepartmentName" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="EmailAddress" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="NK_EmployeeID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int32" />
+            <Field name="FirstName" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="Freight" scale="4" size="22" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="FixedDecimal" />
+            <Field name="Gender" size="1" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="String" />
+            <Field name="HireDate" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="DateTime" />
+            <Field name="JobTitle" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="LastName" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="MaritalStatus" size="1" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="String" />
+            <Field name="MiddleName" size="50" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="PersonType" size="2" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="String" />
+            <Field name="PhoneNumber" size="25" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="PostalCode" size="15" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="PurchaseOrderID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int32" />
+            <Field name="SalariedFlag" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int16" />
+            <Field name="SickLeaveHours" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int16" />
+            <Field name="SubTotal" scale="4" size="22" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="FixedDecimal" />
+            <Field name="Suffix" size="10" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="TaxAmt" scale="4" size="22" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="FixedDecimal" />
+            <Field name="Title" size="8" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="TotalDue" scale="4" size="22" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="FixedDecimal" />
+            <Field name="VacationHours" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int16" />
+            <Field name="VendorID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int32" />
+            <Field name="SK_GeographyID" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="Int32" />
+            <Field name="CreatedDate" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="DateTime" />
+            <Field name="ModifedDate" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="DateTime" />
+            <Field name="DI_JobID" size="16777216" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+            <Field name="SOR_SK" size="16777216" source="File: odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||select dim_employee.* &#xA;from dim_employee" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="438" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="DateTimeNow()" field="CreatedDate" size="19" type="DateTime" />
+            <FormulaField expression="DateTimeNow()" field="ModifiedDate" size="19" type="DateTime" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_JobID" size="1073741823" type="V_WString" />
+            <FormulaField expression="&quot;2&quot;" field="SOR_SK" size="1073741823" type="V_WString" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>CreatedDate = DateTimeNow()
+ModifiedDate = DateTimeNow()
+DI_JobID = [Engine.Work...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="510" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>SK_EmployeePayID</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="594" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SK_EmployeePayID" selected="True" />
+            <SelectField field="RateChangeDate" selected="True" />
+            <SelectField field="Rate" selected="True" />
+            <SelectField field="PayFrequency" selected="True" />
+            <SelectField field="StartDate" selected="True" />
+            <SelectField field="EndDate" selected="True" />
+            <SelectField field="SK_EmployeeID" selected="True" />
+            <SelectField field="CreatedDate" selected="True" />
+            <SelectField field="ModifiedDate" selected="True" />
+            <SelectField field="DI_JobID" selected="True" />
+            <SelectField field="SOR_SK" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="678" y="66" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=AW_Purchasing;UID=root;PWD=__EncPwd1__|||Dim_EmployeePay</File>
+          <Passwords>4AFE7C619E339CB0F8AAFE90371BE7BE6E142</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=AW_Purchasing
+Query=Dim_EmployeePay</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="3" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="3" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Join" />
+      <Destination ToolID="4" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Output" />
+      <Destination ToolID="4" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Join" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="6" Connection="Output" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Dim_EmployeePay</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

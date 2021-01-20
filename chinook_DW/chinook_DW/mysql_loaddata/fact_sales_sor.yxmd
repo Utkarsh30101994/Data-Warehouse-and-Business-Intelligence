@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="2020.3">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="54" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* 
+from invoice</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_db
+Query=select invoice.* 
+from invo...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="InvoiceId" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="Int32" />
+            <Field name="CustomerId" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="Int32" />
+            <Field name="InvoiceDate" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="DateTime" />
+            <Field name="BillingAddress" size="70" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="V_WString" />
+            <Field name="BillingCity" size="40" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="V_WString" />
+            <Field name="BillingState" size="40" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="V_WString" />
+            <Field name="BillingCountry" size="40" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="V_WString" />
+            <Field name="BillingPostalCode" size="10" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="V_WString" />
+            <Field name="Total" scale="2" size="12" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoice.* &#xA;from invoice" type="FixedDecimal" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="2">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="150" y="78" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="InvoiceId" selected="True" />
+            <SelectField field="CustomerId" selected="True" rename="CustomerSK" />
+            <SelectField field="InvoiceDate" selected="True" />
+            <SelectField field="BillingAddress" selected="True" />
+            <SelectField field="BillingPostalCode" selected="True" />
+            <SelectField field="BillingCity" selected="True" rename="City" />
+            <SelectField field="BillingState" selected="True" rename="State" />
+            <SelectField field="BillingCountry" selected="True" rename="Country" />
+            <SelectField field="Total" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="66" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoiceline.* 
+from invoiceline</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_db
+Query=select invoiceline.* 
+from ...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field description="PrimaryKey" name="InvoiceLineId" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoiceline.* &#xA;from invoiceline" type="Int32" />
+            <Field name="InvoiceId" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoiceline.* &#xA;from invoiceline" type="Int32" />
+            <Field name="TrackId" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoiceline.* &#xA;from invoiceline" type="Int32" />
+            <Field name="UnitPrice" scale="2" size="12" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoiceline.* &#xA;from invoiceline" type="FixedDecimal" />
+            <Field name="Quantity" source="File: odbc:DSN=chinook_db;UID=root;PWD=__EncPwd1__|||select invoiceline.* &#xA;from invoiceline" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="162" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="False" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="TrackId" selected="True" rename="SongSK" />
+            <SelectField field="Quantity" selected="True" rename="SalesQuantity" />
+            <SelectField field="*Unknown" selected="True" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="5">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="294" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="InvoiceId" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="InvoiceId" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_InvoiceId" selected="True" rename="Right_InvoiceId" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="390" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="CustomerSK" selected="True" />
+            <SelectField field="InvoiceDate" selected="True" />
+            <SelectField field="BillingAddress" selected="True" />
+            <SelectField field="BillingPostalCode" selected="True" />
+            <SelectField field="SongSK" selected="True" />
+            <SelectField field="SalesQuantity" selected="True" />
+            <SelectField field="InvoiceLineId" selected="True" />
+            <SelectField field="InvoiceId" selected="True" />
+            <SelectField field="Right_InvoiceId" selected="False" />
+            <SelectField field="UnitPrice" selected="True" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="Total" selected="True" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="486" y="150" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[UnitPrice]*[SalesQuantity]" field="SalesAmount" size="8" type="Double" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText><![CDATA[SalesAmount = [UnitPrice]*[SalesQuantity]
+]]></DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.RecordID.RecordID">
+        <Position x="582" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FieldName>SalesSK</FieldName>
+          <StartValue>1</StartValue>
+          <FieldType>Int32</FieldType>
+          <FieldSize>6</FieldSize>
+          <Position>0</Position>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxRecordID" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="666" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SalesSK" selected="True" />
+            <SelectField field="CustomerSK" selected="True" />
+            <SelectField field="InvoiceDate" selected="True" />
+            <SelectField field="BillingAddress" selected="True" />
+            <SelectField field="BillingPostalCode" selected="True" />
+            <SelectField field="SongSK" selected="True" />
+            <SelectField field="SalesQuantity" selected="True" />
+            <SelectField field="SalesAmount" selected="True" />
+            <SelectField field="InvoiceLineId" selected="True" />
+            <SelectField field="InvoiceId" selected="True" />
+            <SelectField field="UnitPrice" selected="False" />
+            <SelectField field="City" selected="True" />
+            <SelectField field="State" selected="True" />
+            <SelectField field="Country" selected="True" />
+            <SelectField field="Total" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="666" y="258" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,
+	dim_geography.State,
+	dim_geography.Country,
+	dim_geography.GeoSK 
+from dim_geography</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_dw
+Query=select dim_geography.City,...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="City" size="40" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.State,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK &#xA;from dim_geography" type="V_String" />
+            <Field name="State" size="40" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.State,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK &#xA;from dim_geography" type="V_String" />
+            <Field name="Country" size="40" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.State,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK &#xA;from dim_geography" type="V_String" />
+            <Field name="GeoSK" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_geography.City,&#xA;	dim_geography.State,&#xA;	dim_geography.Country,&#xA;	dim_geography.GeoSK &#xA;from dim_geography" type="Int32" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="750" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="City" />
+            <Field field="State" />
+            <Field field="Country" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="City" />
+            <Field field="State" />
+            <Field field="Country" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="Right_City" selected="True" rename="Right_City" input="Right_" />
+                <SelectField field="Right_State" selected="True" rename="Right_State" input="Right_" />
+                <SelectField field="Right_Country" selected="True" rename="Right_Country" input="Right_" />
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="834" y="186" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SalesSK" selected="True" />
+            <SelectField field="CustomerSK" selected="True" />
+            <SelectField field="InvoiceDate" selected="True" />
+            <SelectField field="BillingAddress" selected="True" />
+            <SelectField field="BillingPostalCode" selected="True" />
+            <SelectField field="GeoSK" selected="True" rename="BillingGeoSK" />
+            <SelectField field="SongSK" selected="True" />
+            <SelectField field="SalesQuantity" selected="True" />
+            <SelectField field="SalesAmount" selected="True" />
+            <SelectField field="InvoiceLineId" selected="True" />
+            <SelectField field="InvoiceId" selected="True" />
+            <SelectField field="City" selected="False" />
+            <SelectField field="State" selected="False" />
+            <SelectField field="Country" selected="False" />
+            <SelectField field="Right_City" selected="False" />
+            <SelectField field="Right_State" selected="False" />
+            <SelectField field="Right_Country" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileInput.DbFileInput">
+        <Position x="834" y="270" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <File RecordLimit="" FileFormat="23">odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_date.DateSK,
+	dim_date.FullDateAK 
+from dim_date</File>
+          <FormatSpecificOptions>
+            <PreSQL />
+            <ReadCentroids>False</ReadCentroids>
+            <PreSQLOnConfig>True</PreSQLOnConfig>
+            <NoProgress>True</NoProgress>
+            <CacheData>False</CacheData>
+            <TableStyle>Quoted</TableStyle>
+            <ReadUncommitted>False</ReadUncommitted>
+            <PostSQL />
+          </FormatSpecificOptions>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_dw
+Query=select dim_date.DateSK,
+	di...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="DateSK" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_date.DateSK,&#xA;	dim_date.FullDateAK &#xA;from dim_date" type="Int32" />
+            <Field name="FullDateAK" source="File: odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||select dim_date.DateSK,&#xA;	dim_date.FullDateAK &#xA;from dim_date" type="DateTime" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileInput" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Join.Join">
+        <Position x="918" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration joinByRecordPos="False">
+          <JoinInfo connection="Left">
+            <Field field="InvoiceDate" />
+          </JoinInfo>
+          <JoinInfo connection="Right">
+            <Field field="FullDateAK" />
+          </JoinInfo>
+          <SelectConfiguration>
+            <Configuration outputConnection="Join">
+              <OrderChanged value="False" />
+              <CommaDecimal value="False" />
+              <SelectFields>
+                <SelectField field="*Unknown" selected="True" />
+              </SelectFields>
+            </Configuration>
+          </SelectConfiguration>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoin" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
+        <Position x="1014" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <OrderChanged value="True" />
+          <CommaDecimal value="False" />
+          <SelectFields>
+            <SelectField field="SalesSK" selected="True" />
+            <SelectField field="CustomerSK" selected="True" />
+            <SelectField field="DateSK" selected="True" rename="InvoiceDateSK" />
+            <SelectField field="InvoiceDate" selected="True" />
+            <SelectField field="BillingAddress" selected="True" />
+            <SelectField field="BillingPostalCode" selected="True" />
+            <SelectField field="BillingGeoSK" selected="True" />
+            <SelectField field="SongSK" selected="True" />
+            <SelectField field="SalesQuantity" selected="True" />
+            <SelectField field="SalesAmount" selected="True" />
+            <SelectField field="InvoiceLineId" selected="True" />
+            <SelectField field="InvoiceId" selected="True" />
+            <SelectField field="FullDateAK" selected="False" />
+            <SelectField field="*Unknown" selected="False" />
+          </SelectFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSelect" />
+    </Node>
+    <Node ToolID="17">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Formula.Formula">
+        <Position x="1110" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <FormulaFields>
+            <FormulaField expression="[Engine.WorkflowFileName]" field="DI_Job_ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="DI_Create_Date" size="19" type="DateTime" />
+            <FormulaField expression="DateTimeNow()" field="DI_Modified_Date" size="19" type="DateTime" />
+            <FormulaField expression="[Engine.WorkflowFileName]" field="SOR_ID" size="1073741823" type="V_WString" />
+            <FormulaField expression="DateTimeNow()" field="SOR_LoadDate" size="19" type="DateTime" />
+            <FormulaField expression="DateTimeNow()" field="SOR_UpdateDate" size="19" type="DateTime" />
+          </FormulaFields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DI_Job_ID = [Engine.WorkflowFileName]
+DI_Create_Date = DateTimeNow()
+DI_Modified...</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxFormula" />
+    </Node>
+    <Node ToolID="18">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DbFileOutput.DbFileOutput">
+        <Position x="1206" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <File MaxRecords="" FileFormat="23">odbc:DSN=chinook_dw;UID=root;PWD=__EncPwd1__|||fact_sales</File>
+          <Passwords>44204192286E2A7AB7A1957AC82C495CE91E51E8B</Passwords>
+          <FormatSpecificOptions>
+            <SpatialObjSize>8000</SpatialObjSize>
+            <TransactionSize>10000</TransactionSize>
+            <IgnoreDropTableSQLErrors>False</IgnoreDropTableSQLErrors>
+            <PostSQL />
+            <TableStyle>Quoted</TableStyle>
+            <PreSQL />
+            <TransactionMessages>False</TransactionMessages>
+            <OutputOption>Overwrite</OutputOption>
+          </FormatSpecificOptions>
+          <MultiFile value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>DSN=chinook_dw
+Query=fact_sales</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDbFileOutput" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output" />
+      <Destination ToolID="2" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="2" Connection="Output" />
+      <Destination ToolID="5" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="4" Connection="Output" />
+      <Destination ToolID="5" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="4" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="5" Connection="Join" />
+      <Destination ToolID="7" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="12" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="11" Connection="Output" />
+      <Destination ToolID="12" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="12" Connection="Join" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="13" Connection="Output" />
+      <Destination ToolID="15" Connection="Left" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="14" Connection="Output" />
+      <Destination ToolID="15" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="15" Connection="Join" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="16" Connection="Output" />
+      <Destination ToolID="17" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="17" Connection="Output" />
+      <Destination ToolID="18" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>fact_sales_sor</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
